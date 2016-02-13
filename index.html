@@ -1,0 +1,89 @@
+<!doctype HTML>
+<!--[if lt IE 7]>  <html class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <html> <![endif]-->
+<!--[if !IE]><!--> <html>             <!--<![endif]-->
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="Portfolio of front-end developer Angus Dowling" />
+  <meta name="robots" content="follow, index" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic' rel='stylesheet' type='text/css'>
+
+  <title>Monster (PVE) Dodge Probability Calculator</title>
+  <link href="./assets/css/normalize.css" rel="stylesheet" type="text/css">
+  <!-- @TODO: Import normalize -->
+  <link href="./assets/css/master.css" rel="stylesheet" type="text/css">
+  
+  <script src="./assets/js/modernizr.js"></script>
+  <!-- @TODO: Include jQuery locally -->
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  
+</head>
+<body>
+
+  <div class="c-page">
+
+    <!-- Site Masthead -->
+    <header class="masthead">
+      <h1>Monster (PVE) Dodge Probability Calculator</h1>
+    </header>
+    <!-- /Site Masthead -->
+
+    <!-- PVE Calculator -->
+    <section class="c-dodge-calc">
+      <header class="header" data-content="">
+        <!-- <h1>Monster (PVE) Dodge Probability Calculator</h1> -->
+      </header>
+
+      <div class="form-row text-input">
+        <label for="m_cLevel">Character Level</label>
+        <input type="text" name="m_cLevel" id="m_cLevel" required min="0" max="99" size="1" maxlength="2" placeholder="Your level">
+      </div>
+
+      <div class="form-row text-input">
+        <label for="m_cDefSkill">Character Defense PT</label>
+        <input type="text" name="m_cDefSkill" id="m_cDefSkill" required min="0" max="99" size="1" maxlength="2" placeholder="Your defense PT">
+      </div>
+
+      <div class="form-row text-input">
+        <label for="m_cAvoidRate">Character Avoid Rate</label>
+        <input type="text" name="m_cAvoidRate" id="m_cAvoidRate" required min="0" max="999" size="1" maxlength="3" placeholder="Your dodge">
+      </div>
+
+      <div class="form-row text-input">
+        <label for="monsters">Monster Accuracy Rating</label>
+        <input type="text" name="monsters" id="monsters" required placeholder="Type in a monster">
+      </div>
+
+      <!-- <div class="form-row">
+        <label for="m_cMoving">Is Character Moving?</label>
+        <input type="checkbox" name="m_cMoving" id="m_cMoving" required min="0" max="999" size="1" maxlength="3" placeholder="Character level">
+      </div> -->
+
+      <div class="form-row submit-input cf"> 
+        <button class="submit">Get probability</button>
+      </div>
+
+      <div class="error container">
+        <p>Please don't leave any fields blank.</p>
+      </div>
+    </section>
+    <!-- /PVE Calculator -->
+
+  </div>
+
+  <!-- Vendor -->
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="./assets/js/seedrandom.min.js"></script>
+
+  <!-- Application -->
+  <script src="./assets/js/critical.js"></script>
+  <script src="./assets/js/pvp.js"></script>
+  <script src="./assets/js/pve.js"></script>
+  <script src="./assets/js/common.js"></script>
+</body>
+</html>

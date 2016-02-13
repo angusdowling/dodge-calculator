@@ -1,0 +1,252 @@
+/* BASE
+----------------------- */
+
+    body {
+        background: #658B92;
+        color: #fff;
+        font-family: "Open Sans", sans-serif;
+    }
+
+/* HELPERS
+----------------------- */
+
+    .cf:before,
+    .cf:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    .cf:after {
+        clear: both;
+    }
+
+    /**
+     * For IE 6/7 only
+     * Include this rule to trigger hasLayout and contain floats.
+     */
+    .cf {
+        *zoom: 1;
+    }
+
+/* MASTHEAD
+----------------------- */
+    .masthead {
+        background: #333;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .masthead h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 100;
+        color: #777;
+    }
+
+/* DODGE CALC BASE
+----------------------- */
+    .c-dodge-calc {
+        width: 600px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -260px 0 0 -310px;
+        box-shadow: 15px 15px 0 0 #61838A;
+    }
+
+/* HEADER
+----------------------- */
+
+    .c-dodge-calc .header {
+         /*padding: 20px;*/
+         background-color: #47565A;
+         height: 100px;
+         overflow: hidden;
+    }
+
+    .c-dodge-calc .header:before {
+        content: attr(data-content);
+        display: block;
+        float: left;
+        width: 480px;
+        height: 100px;
+        box-sizing: border-box;
+        padding: 20px;
+        font-size: 48px;
+        font-weight: 100;
+        text-align: right;
+    }
+
+    .c-dodge-calc .header:after {
+        content: "%";
+        display: block;
+        float: right;
+        padding: 32px 45px;
+        background: #384346;
+        height: 100px;
+        width: 120px;
+        box-sizing: border-box;
+        font-size: 26px;
+        font-weight: 100;
+        color: #B7C6CA;
+    }
+
+/* FORM ROWS
+----------------------- */
+
+    .c-dodge-calc .form-row {
+        border-bottom: 1px solid #E4E3E3;
+        transition: 0.3s all;
+    }
+
+    .c-dodge-calc .form-row:nth-child(5) {
+        border: 0 none;
+    }
+
+    .c-dodge-calc .form-row input {
+        background: #F3F8F9;
+        color: #fff;
+        font-weight: 100;
+        transition: 0.3s all;
+        outline: 0;
+    }
+
+    .c-dodge-calc .form-row input:focus {
+        background: #fff;
+    }
+
+    .c-dodge-calc .form-row.error {
+        border-bottom: 1px solid #A53939;
+    }
+
+    .c-dodge-calc .form-row.error input {
+        background: #BD4747;
+        color: #fff !important;
+    }
+
+    .c-dodge-calc .form-row.error input::-webkit-input-placeholder {
+    color: #fff !important;
+    }
+     
+    .c-dodge-calc .form-row.error input:-moz-placeholder { 
+    color: #fff !important;  
+    }
+     
+    .c-dodge-calc .form-row.error input::-moz-placeholder { 
+    color: #fff !important;  
+    }
+     
+    .c-dodge-calc .form-row.error input:-ms-input-placeholder {  
+    color: #fff !important;  
+    }
+
+    .c-dodge-calc .form-row.text-input label {
+        display: none;
+    }
+
+    .c-dodge-calc .form-row input[type="text"] {
+        width: calc(100% - 40px);
+        border: 0;
+        padding: 20px;
+        color:  #505050;
+        display: block;
+    }
+
+/* SUBMIT
+----------------------- */
+
+    .c-dodge-calc .submit-input {
+        border: 0;
+    }
+
+    .c-dodge-calc .submit {
+        color: #fff;
+        background: #50A5B9;
+        border: 0;
+        padding: 20px 20px;
+        width: 100%;
+        transition: 0.3s all;
+        outline: 0;
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+
+    .c-dodge-calc .submit:hover {
+        background: #2DAECC;
+    }
+
+/* RESULTS
+----------------------- */
+
+    .c-dodge-calc .results-container {
+        float: left;
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+
+/* AUTOCOMPLETE
+----------------------- */
+
+    .ui-autocomplete {
+        width: 600px !important;
+        height: 300px;
+        box-sizing: border-box;
+        overflow: scroll;
+        padding: 0;
+        background: #333;
+    }
+
+    .ui-autocomplete .ui-menu-item {
+        list-style-type: none;
+        box-sizing: border-box;
+        height: 50px;
+        padding: 15px 10px;
+        margin: 0 15px;
+        font-weight: 100;
+        font-size: 14px;
+        border-bottom: 1px solid #444;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .ui-autocomplete .ui-menu-item:hover,
+    .ui-autocomplete .ui-menu-item.ui-state-focus {
+        background: #444;
+    }
+
+/* ERROR
+----------------------- */
+    
+    .error.container {
+        position: absolute;
+        background: #942D2D;
+        height: 70px;
+        width: 450px;
+        top: 115px;
+        left: 75px;
+        text-align: center;
+        box-sizing: border-box;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s all;
+    }
+
+    .error.container.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .error.container p {
+        margin: 0;
+        padding: 25px 0;
+        font-weight: 100;
+    }
+
+/* MISC
+----------------------- */
+
+    .ui-helper-hidden-accessible {
+        visibility: hidden;
+        opacity: 0;
+    }
+
